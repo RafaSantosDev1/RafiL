@@ -3,16 +3,9 @@
 }
 
 main {
-  margin-left: var(--rail-width);
+  padding-top: var(--nav-height);
 }
 
 main section {
-  scroll-margin-top: var(--topbar-height);
-}
-
-@media (max-width: 1023px) {
-  main {
-    margin-left: 0;
-    padding-top: var(--topbar-height);
-  }
+  scroll-margin-top: var(--nav-height);
 }

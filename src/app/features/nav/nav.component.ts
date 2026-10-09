@@ -1,18 +1,20 @@
 import { Component, computed, inject } from '@angular/core';
 import { I18nService } from '../../i18n/i18n.service';
 import { SectionTrackerService } from '../../core/services/section-tracker.service';
+import { MobileMenuService } from '../../core/services/mobile-menu.service';
 import { LanguageToggleComponent } from '../../shared/language-toggle/language-toggle.component';
 
 @Component({
-  selector: 'app-nav-rail',
+  selector: 'app-nav',
   standalone: true,
   imports: [LanguageToggleComponent],
-  templateUrl: './nav-rail.component.html',
-  styleUrl: './nav-rail.component.scss'
+  templateUrl: './nav.component.html',
+  styleUrl: './nav.component.scss'
 })
-export class NavRailComponent {
+export class NavComponent {
   protected readonly i18n = inject(I18nService);
   protected readonly tracker = inject(SectionTrackerService);
+  protected readonly menu = inject(MobileMenuService);
   protected readonly active = this.tracker.active;
 
   protected readonly links = computed(() => {
@@ -26,3 +28,4 @@ export class NavRailComponent {
     ];
   });
 }
+

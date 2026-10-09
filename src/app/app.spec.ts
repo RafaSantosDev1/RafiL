@@ -48,7 +48,7 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const rail = compiled.querySelector('app-nav-rail .lang-toggle');
+    const rail = compiled.querySelector('app-nav .lang-toggle');
     expect(rail).toBeTruthy();
     const buttons = rail?.querySelectorAll('.lang-toggle__btn') ?? [];
     expect(buttons.length).toBe(2);
@@ -61,7 +61,7 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const railToggle = compiled.querySelector('app-nav-rail .lang-toggle');
+    const railToggle = compiled.querySelector('app-nav .lang-toggle');
     const buttons = Array.from(railToggle?.querySelectorAll<HTMLButtonElement>('.lang-toggle__btn') ?? []);
     buttons[1].click();
     fixture.detectChanges();
@@ -71,3 +71,4 @@ describe('App', () => {
     expect(buttons[0].getAttribute('aria-pressed')).toBe('false');
   });
 });
+

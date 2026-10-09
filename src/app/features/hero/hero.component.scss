@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100svh;
-  padding-top: calc(var(--topbar-height) + 3rem);
-  padding-bottom: 4rem;
+  padding-top: calc(var(--nav-height) + 2.5rem);
+  padding-bottom: 3.5rem;
 }
 
 .hero__grid {

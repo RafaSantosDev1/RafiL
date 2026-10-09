@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { NavRailComponent } from './features/nav-rail/nav-rail.component';
-import { TopbarComponent } from './features/topbar/topbar.component';
+import { NavComponent } from './features/nav/nav.component';
 import { MobileMenuComponent } from './features/mobile-menu/mobile-menu.component';
 import { HeroComponent } from './features/hero/hero.component';
 import { AboutComponent } from './features/about/about.component';
@@ -15,8 +14,7 @@ import { I18nService } from './i18n/i18n.service';
   selector: 'app-root',
   standalone: true,
   imports: [
-    NavRailComponent,
-    TopbarComponent,
+    NavComponent,
     MobileMenuComponent,
     HeroComponent,
     AboutComponent,

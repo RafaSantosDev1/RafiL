@@ -1,0 +1,37 @@
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Rafael Santos — início / home">
+      <span class="nav__monogram">RS</span>
+      <span class="nav__name">Rafael Santos</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Navegação principal / Primary navigation">
+      @for (link of links(); track link.id) {
+        <a
+          class="nav__link"
+          [class.is-active]="active() === link.id"
+          [href]="'#' + link.id"
+          [attr.aria-current]="active() === link.id ? 'true' : null"
+        >
+          <span class="nav__num">{{ link.index }}</span>
+          <span class="nav__label">{{ link.label }}</span>
+        </a>
+      }
+    </nav>
+
+    <div class="nav__side">
+      <app-language-toggle />
+      <button
+        type="button"
+        class="nav__burger"
+        [class.is-open]="menu.isOpen()"
+        (click)="menu.openMenu()"
+        [attr.aria-label]="i18n.dict().nav.openMenu"
+        [attr.aria-expanded]="menu.isOpen()"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>

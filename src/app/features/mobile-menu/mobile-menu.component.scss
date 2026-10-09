@@ -1,0 +1,121 @@
+.menu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--coal);
+  color: var(--paper-on-dark);
+  z-index: 60;
+  padding: 1.25rem var(--gutter) 2rem;
+  animation: menu-in 0.28s var(--ease-out);
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.menu__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(var(--topbar-height) - 1.25rem);
+  flex-shrink: 0;
+}
+
+.menu__brand {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.menu__close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid var(--line-on-dark);
+  border-radius: 2px;
+  color: var(--paper-on-dark);
+}
+
+.menu__close:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.menu__nav {
+  margin: auto 0;
+}
+
+.menu__nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-on-dark);
+}
+
+.menu__nav li {
+  border-bottom: 1px solid var(--line-on-dark);
+}
+
+.menu__nav a {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 1.1rem 0.25rem;
+  transition: color var(--dur-fast) var(--ease-out), padding-left var(--dur-fast) var(--ease-out);
+}
+
+.menu__nav a:hover {
+  color: var(--accent);
+  padding-left: 0.75rem;
+}
+
+.menu__num {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.menu__label {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 9vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.menu__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-on-dark);
+}
+
+.menu__tagline {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-on-dark);
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu {
+    animation: none;
+  }
+}

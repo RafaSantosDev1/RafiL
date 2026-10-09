@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="footer__monogram">RS</span>
+      <span class="footer__text">
+        <span class="footer__name">Rafael Santos</span>
+        <span class="footer__tagline">{{ dict().footer.tagline }}</span>
+      </span>
+    </div>
+
+    <nav class="footer__nav" aria-label="Navegação secundária / Footer navigation">
+      <a [href]="githubUrl" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="#top">{{ dict().footer.top }} ↑</a>
+    </nav>
+
+    <p class="footer__meta">
+      <span>© {{ year }} — {{ dict().footer.rights }}</span>
+    </p>
+  </div>
+</footer>

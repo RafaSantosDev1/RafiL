@@ -1,0 +1,27 @@
+<section class="section section--light" id="about">
+  <div class="section__inner">
+    <app-section-heading [index]="dict().about.index" [label]="dict().about.label" />
+
+    <div class="about__grid">
+      <div class="about__head">
+        <h2 class="about__heading" reveal>{{ dict().about.heading }}</h2>
+        <p class="about__lead" reveal [revealDelay]="80">{{ dict().about.lead }}</p>
+      </div>
+
+      <div class="about__body">
+        @for (paragraph of dict().about.paragraphs; track paragraph) {
+          <p class="about__text" reveal>{{ paragraph }}</p>
+        }
+
+        <div class="about__facts">
+          @for (fact of dict().about.facts; track fact.title; let i = $index) {
+            <div class="fact" reveal [revealDelay]="i * 60">
+              <span class="fact__title">{{ fact.title }}</span>
+              <p class="fact__items">{{ fact.items.join(' · ') }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

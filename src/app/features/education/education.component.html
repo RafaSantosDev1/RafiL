@@ -1,0 +1,50 @@
+<section class="section section--dark" id="education">
+  <div class="section__inner">
+    <app-section-heading [index]="dict().education.index" [label]="dict().education.label" />
+
+    <div class="education__grid">
+      <div class="education__main">
+        <h2 class="education__heading" reveal>{{ dict().education.heading }}</h2>
+
+        <div class="degree" reveal [revealDelay]="80">
+          <span class="degree__badge" aria-hidden="true">ISEP</span>
+          <div class="degree__body">
+            <p class="degree__name">{{ dict().education.degree }}</p>
+            <p class="degree__institution">{{ dict().education.institution }}</p>
+            <p class="degree__period">{{ dict().education.period }}</p>
+          </div>
+        </div>
+
+        <p class="degree__note" reveal [revealDelay]="140">{{ dict().education.degreeNote }}</p>
+      </div>
+
+      <div class="education__side">
+        <div class="edu-block" reveal>
+          <h3 class="edu-block__title">{{ dict().education.approachTitle }}</h3>
+          <ul class="edu-list">
+            @for (item of dict().education.approachItems; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="edu-block" reveal [revealDelay]="80">
+          <h3 class="edu-block__title">{{ dict().education.mentorshipTitle }}</h3>
+          <p class="edu-block__text">{{ dict().education.mentorshipText }}</p>
+        </div>
+
+        <div class="edu-block" reveal [revealDelay]="140">
+          <h3 class="edu-block__title">{{ dict().education.languagesTitle }}</h3>
+          <ul class="lang-list">
+            @for (language of dict().education.languages; track language.name) {
+              <li>
+                <span class="lang-list__name">{{ language.name }}</span>
+                <span class="lang-list__level">{{ language.level }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<header class="topbar">
+  <a class="topbar__brand" href="#top" aria-label="Rafael Santos — início / home">
+    <span class="topbar__monogram">RS</span>
+    <span class="topbar__name">Rafael Santos</span>
+  </a>
+
+  <div class="topbar__right">
+    <app-language-toggle />
+    <button
+      type="button"
+      class="topbar__burger"
+      [class.is-open]="menu.isOpen()"
+      (click)="menu.openMenu()"
+      [attr.aria-label]="i18n.dict().nav.openMenu"
+      [attr.aria-expanded]="menu.isOpen()"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+</header>

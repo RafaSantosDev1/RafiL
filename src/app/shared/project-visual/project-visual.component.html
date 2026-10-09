@@ -1,0 +1,299 @@
+<div class="pv" [attr.data-visual]="visual()">
+  <svg class="pv-svg" viewBox="0 0 640 440" fill="none" role="img" [attr.aria-label]="alt()">
+    @switch (visual()) {
+      @case ('port') {
+        <!-- ============ SHIP MANAGEMENT AND PORT OPERATIONS ============ -->
+        <g class="pv-grid">
+          <path d="M40 40H600M40 80H600M40 120H600M40 160H600M40 200H600M40 240H600M40 280H600M40 320H600M40 360H600M40 400H600" />
+          <path d="M40 40V400M80 40V400M120 40V400M160 40V400M200 40V400M240 40V400M280 40V400M320 40V400M360 40V400M400 40V400M440 40V400M480 40V400M520 40V400M560 40V400M600 40V400" />
+        </g>
+        <text class="pv-label" x="40" y="58">SISTEMA PORTUÁRIO — OPERAÇÕES DE CARGA</text>
+
+        <!-- quay -->
+        <path class="pv-line pv-line--strong" d="M40 300H600" />
+        <g class="pv-line" opacity="0.5">
+          <path d="M50 300v9M70 300v9M90 300v9M110 300v9M130 300v9M150 300v9M170 300v9M190 300v9M210 300v9M230 300v9M250 300v9M270 300v9M290 300v9M310 300v9M330 300v9M350 300v9M370 300v9M390 300v9M410 300v9M430 300v9M450 300v9M470 300v9M490 300v9M510 300v9M530 300v9M550 300v9M570 300v9M590 300v9" />
+        </g>
+
+        <!-- water -->
+        <g class="pv-line pv-dash" opacity="0.3">
+          <path d="M40 332H600M40 362H600M40 392H600" />
+        </g>
+
+        <!-- ship hull -->
+        <path class="pv-line pv-line--strong pv-fill" d="M142 262h346l-22 38H164z" />
+        <path class="pv-line pv-line--strong" d="M142 262h346l-22 38H164z" />
+        <!-- bridge tower + mast -->
+        <rect class="pv-line pv-line--strong pv-fill" x="150" y="214" width="30" height="48" />
+        <path class="pv-line" d="M165 214v-18" />
+        <circle class="pv-accent-fill" cx="165" cy="193" r="2.5" />
+
+        <!-- containers on deck -->
+        <g class="pv-line">
+          <rect x="196" y="248" width="26" height="14" />
+          <rect x="226" y="248" width="26" height="14" />
+          <rect x="256" y="248" width="26" height="14" />
+          <rect x="286" y="248" width="26" height="14" />
+          <rect x="316" y="248" width="26" height="14" />
+          <rect x="346" y="248" width="26" height="14" />
+          <rect x="376" y="248" width="26" height="14" />
+          <rect x="406" y="248" width="26" height="14" />
+          <rect x="436" y="248" width="26" height="14" />
+          <rect x="211" y="234" width="26" height="14" />
+          <rect x="241" y="234" width="26" height="14" />
+          <rect x="301" y="234" width="26" height="14" />
+          <rect x="331" y="234" width="26" height="14" />
+          <rect class="pv-accent pv-accent-fill" x="271" y="234" width="26" height="14" />
+          <rect class="pv-accent pv-accent-fill" x="391" y="234" width="26" height="14" />
+        </g>
+
+        <!-- gantry crane -->
+        <g class="pv-line pv-line--strong">
+          <path d="M535 300V150M590 300V150M520 150h85" />
+          <path d="M540 150v55" />
+          <rect class="pv-accent pv-accent-fill" x="526" y="205" width="28" height="14" />
+        </g>
+        <circle class="pv-accent-fill" cx="562" cy="140" r="2.5" />
+
+        <!-- routes -->
+        <path class="pv-line pv-accent pv-dash" d="M488 278q52-30 52-72" />
+        <path class="pv-line pv-dash" d="M58 384q32-54 84-79" />
+        <circle class="pv-fill" cx="142" cy="305" r="3" />
+        <path class="pv-line pv-dash" d="M164 300q42 42 108 50" />
+        <circle class="pv-fill" cx="272" cy="350" r="3" />
+
+        <!-- labels -->
+        <text class="pv-label" x="196" y="226">NAVIO</text>
+        <text class="pv-label" x="360" y="226">CARGA</text>
+        <text class="pv-label pv-label--accent" x="520" y="128">PORTO</text>
+        <text class="pv-label" x="600" y="424" text-anchor="end">FIG. 02</text>
+      }
+
+      @case ('hospital') {
+        <!-- ============ 3D HOSPITAL ============ -->
+        <!-- iso floor grid -->
+        <path class="pv-line pv-line--strong pv-fill" d="M320 280 450 355 320 430 190 355z" />
+        <g class="pv-line" opacity="0.4">
+          <path d="M216 340 346 415M242 325 372 400M268 310 398 385M294 295 424 370" />
+          <path d="M346 295 216 370M372 310 242 385M398 325 268 400M424 340 294 415" />
+        </g>
+
+        <!-- orbit indicator -->
+        <circle class="pv-line pv-dash" cx="318" cy="262" r="152" opacity="0.25" />
+        <rect class="pv-accent-fill" x="462" y="172" width="7" height="7" />
+
+        <!-- volume 01 (ground) -->
+        <g class="pv-line pv-line--strong">
+          <path class="pv-fill" d="M320 284 417 346 320 388 223 346z" />
+          <path d="M320 284 417 346 320 388 223 346z" />
+          <path d="M223 346v-28l97 56v34M320 388 417 346v-28" />
+        </g>
+        <g class="pv-line pv-fill" opacity="0.06">
+          <path d="M223 318 344 388M223 330 344 400" />
+        </g>
+
+        <!-- volume 02 (middle) -->
+        <g class="pv-line pv-line--strong">
+          <path d="M285 243 348 295 285 327 222 275z" />
+          <path d="M222 275v-23l63 36v32M285 327 348 295v-52" />
+          <path d="M222 252 285 204 348 252" opacity="0" />
+        </g>
+
+        <!-- volume 03 (top) -->
+        <g class="pv-line pv-line--strong">
+          <path d="M300 198 347 239 300 274 253 212z" />
+          <path d="M253 212v-23l47 27v35M300 274 347 239v-41" />
+        </g>
+
+        <!-- helipad -->
+        <circle class="pv-line pv-accent pv-dash" cx="300" cy="198" r="13" />
+        <text class="pv-label pv-label--accent" x="300" y="202" text-anchor="middle">H</text>
+
+        <!-- level labels -->
+        <g class="pv-line" opacity="0.6">
+          <path d="M170 386h28M170 342h28M170 252h28" />
+        </g>
+        <text class="pv-label" x="164" y="390" text-anchor="end">N.01</text>
+        <text class="pv-label" x="164" y="346" text-anchor="end">N.02</text>
+        <text class="pv-label" x="164" y="256" text-anchor="end">N.03</text>
+
+        <text class="pv-label" x="40" y="58">MODELO 3D — WEBGL</text>
+        <text class="pv-label" x="600" y="424" text-anchor="end">FIG. 03</text>
+      }
+
+      @case ('railway') {
+        <!-- ============ RAILWAY MANAGEMENT SYSTEM ============ -->
+        <g class="pv-grid">
+          <path d="M40 40H600M40 80H600M40 120H600M40 160H600M40 200H600M40 240H600M40 280H600M40 320H600M40 360H600M40 400H600" />
+          <path d="M40 40V400M120 40V400M200 40V400M280 40V400M360 40V400M440 40V400M520 40V400M600 40V400" />
+        </g>
+        <text class="pv-label" x="40" y="58">MODELO RELACIONAL — PL/SQL</text>
+
+        <!-- table LINHA -->
+        <g class="pv-line pv-line--strong">
+          <rect class="pv-fill" x="46" y="86" width="150" height="112" />
+          <path d="M46 86h150v112H46zM46 108h150" />
+        </g>
+        <text class="pv-label pv-label--strong" x="58" y="102">LINHA</text>
+        <text class="pv-label" x="58" y="126">id_linha</text>
+        <text class="pv-label" x="58" y="148">nome</text>
+        <text class="pv-label" x="58" y="170">extensão_km</text>
+        <text class="pv-label pv-label--accent" x="182" y="126" text-anchor="end">PK</text>
+
+        <!-- table COMBOIO -->
+        <g class="pv-line pv-line--strong">
+          <rect class="pv-fill" x="270" y="86" width="160" height="112" />
+          <path d="M270 86h160v112H270zM270 108h160" />
+        </g>
+        <text class="pv-label pv-label--strong" x="282" y="102">COMBOIO</text>
+        <text class="pv-label" x="282" y="126">id_comboio</text>
+        <text class="pv-label" x="282" y="148">id_linha</text>
+        <text class="pv-label" x="282" y="170">serviço</text>
+        <text class="pv-label pv-label--accent" x="418" y="126" text-anchor="end">PK</text>
+        <text class="pv-label pv-label--accent" x="418" y="148" text-anchor="end">FK</text>
+
+        <!-- table ESTACAO -->
+        <g class="pv-line pv-line--strong">
+          <rect class="pv-fill" x="270" y="230" width="160" height="112" />
+          <path d="M270 230h160v112H270zM270 252h160" />
+        </g>
+        <text class="pv-label pv-label--strong" x="282" y="246">ESTAÇÃO</text>
+        <text class="pv-label" x="282" y="270">id_estação</text>
+        <text class="pv-label" x="282" y="292">id_linha</text>
+        <text class="pv-label" x="282" y="314">nome</text>
+        <text class="pv-label pv-label--accent" x="418" y="270" text-anchor="end">PK</text>
+        <text class="pv-label pv-label--accent" x="418" y="292" text-anchor="end">FK</text>
+
+        <!-- relationships -->
+        <path class="pv-line pv-accent pv-dash" d="M196 142h74" />
+        <path class="pv-line pv-accent pv-dash" d="M196 168v48h74" />
+        <g class="pv-line pv-accent">
+          <path d="M266 136l7 6-7 6M273 162v12M273 174l-7 6M273 186l7 6" />
+        </g>
+
+        <!-- rail track -->
+        <path class="pv-line pv-line--strong" d="M46 380h548" />
+        <path class="pv-line" d="M46 392h548" opacity="0.5" />
+        <g class="pv-line" opacity="0.6">
+          <path d="M60 380v12M100 380v12M140 380v12M180 380v12M220 380v12M260 380v12M300 380v12M340 380v12M380 380v12M420 380v12M460 380v12M500 380v12M540 380v12M580 380v12" />
+        </g>
+        <g class="pv-line pv-line--strong">
+          <circle class="pv-fill" cx="100" cy="386" r="6" />
+          <circle class="pv-fill" cx="220" cy="386" r="6" />
+          <circle class="pv-fill" cx="340" cy="386" r="6" />
+          <circle class="pv-fill" cx="460" cy="386" r="6" />
+        </g>
+        <path class="pv-line pv-accent pv-dash" d="M100 368h360" />
+        <rect class="pv-accent-fill" x="336" y="362" width="9" height="9" />
+
+        <text class="pv-label" x="100" y="416">ESTAÇÃO A</text>
+        <text class="pv-label" x="460" y="416">ESTAÇÃO D</text>
+        <text class="pv-label" x="600" y="58" text-anchor="end">TRIGGERS · CURSORES</text>
+      }
+
+      @case ('drone') {
+        <!-- ============ DRONE SHOW MANAGEMENT ============ -->
+        <g class="pv-grid">
+          <path d="M40 40H600M40 100H600M40 160H600M40 220H600M40 280H600M40 340H600M40 400H600" />
+          <path d="M40 40V400M120 40V400M200 40V400M280 40V400M360 40V400M440 40V400M520 40V400M600 40V400" />
+        </g>
+        <text class="pv-label" x="40" y="58">COORDENAÇÃO DE ESPETÁCULO — JPA</text>
+
+        <!-- control links -->
+        <g class="pv-line pv-accent pv-dash" opacity="0.65">
+          <path d="M320 300 236 196M320 300 280 176M320 300 328 160M320 300 380 176M320 300 424 196M320 300 268 252M320 300 386 252" />
+        </g>
+
+        <!-- flight formation paths -->
+        <path class="pv-line pv-dash" d="M236 196q44-24 92-36 48 12 92 36" opacity="0.4" />
+
+        <!-- drones -->
+        <g class="pv-line pv-line--strong">
+          <g transform="translate(236 196)">
+            <circle class="pv-fill" r="5" />
+            <path d="M-11-11h9M2-11h9M-11 11h9M2 11h9M-11-11v9M-11 2v9M11-11v9M11 2v9" opacity="0.7" />
+          </g>
+          <g transform="translate(280 176)">
+            <circle class="pv-fill" r="5" />
+            <path d="M-11-11h9M2-11h9M-11 11h9M2 11h9M-11-11v9M-11 2v9M11-11v9M11 2v9" opacity="0.7" />
+          </g>
+          <g transform="translate(328 160)">
+            <circle class="pv-accent-fill" r="5" />
+            <path d="M-11-11h9M2-11h9M-11 11h9M2 11h9M-11-11v9M-11 2v9M11-11v9M11 2v9" opacity="0.7" />
+          </g>
+          <g transform="translate(380 176)">
+            <circle class="pv-fill" r="5" />
+            <path d="M-11-11h9M2-11h9M-11 11h9M2 11h9M-11-11v9M-11 2v9M11-11v9M11 2v9" opacity="0.7" />
+          </g>
+          <g transform="translate(424 196)">
+            <circle class="pv-fill" r="5" />
+            <path d="M-11-11h9M2-11h9M-11 11h9M2 11h9M-11-11v9M-11 2v9M11-11v9M11 2v9" opacity="0.7" />
+          </g>
+          <g transform="translate(268 252)">
+            <circle class="pv-fill" r="5" />
+            <path d="M-11-11h9M2-11h9M-11 11h9M2 11h9M-11-11v9M-11 2v9M11-11v9M11 2v9" opacity="0.7" />
+          </g>
+          <g transform="translate(386 252)">
+            <circle class="pv-fill" r="5" />
+            <path d="M-11-11h9M2-11h9M-11 11h9M2 11h9M-11-11v9M-11 2v9M11-11v9M11 2v9" opacity="0.7" />
+          </g>
+        </g>
+
+        <!-- control node -->
+        <rect class="pv-accent-fill" x="313" y="293" width="14" height="14" />
+        <circle class="pv-line pv-accent" cx="320" cy="300" r="22" opacity="0.5" />
+        <text class="pv-label pv-label--accent" x="320" y="342" text-anchor="middle">CONTROLO</text>
+        <text class="pv-label" x="328" y="152" text-anchor="middle">DRONE 03</text>
+        <text class="pv-label" x="600" y="424" text-anchor="end">FIG. 04</text>
+      }
+
+      @default {
+        <!-- ============ ENVIRONMENTAL DATA ============ -->
+        <g class="pv-grid">
+          <path d="M70 60V380M70 100H600M70 140H600M70 180H600M70 220H600M70 260H600M70 300H600M70 340H600" />
+        </g>
+        <text class="pv-label" x="70" y="50">ANÁLISE ESTATÍSTICA — AMBIENTAL</text>
+
+        <!-- axes -->
+        <path class="pv-line pv-line--strong" d="M70 380h530M70 60v320" />
+        <g class="pv-line" opacity="0.6">
+          <path d="M70 100h-8M70 140h-8M70 180h-8M70 220h-8M70 260h-8M70 300h-8M70 340h-8M110 380v8M150 380v8M190 380v8M230 380v8M270 380v8M310 380v8M350 380v8M390 380v8M430 380v8M470 380v8M510 380v8M550 380v8" />
+        </g>
+        <text class="pv-label" x="600" y="410" text-anchor="end">VARIÁVEL A →</text>
+
+        <!-- regression line -->
+        <path class="pv-line pv-accent pv-dash" d="M105 356 552 126" />
+
+        <!-- scatter -->
+        <g class="pv-line pv-dot-in">
+          <circle class="pv-fill pv-dot" cx="112" cy="350" r="4" style="animation-delay: 0ms" />
+          <circle class="pv-fill pv-dot" cx="142" cy="332" r="4" style="animation-delay: 60ms" />
+          <circle class="pv-fill pv-dot" cx="166" cy="342" r="4" style="animation-delay: 120ms" />
+          <circle class="pv-fill pv-dot" cx="192" cy="310" r="4" style="animation-delay: 180ms" />
+          <circle class="pv-fill pv-dot" cx="216" cy="302" r="4" style="animation-delay: 240ms" />
+          <circle class="pv-fill pv-dot" cx="242" cy="286" r="4" style="animation-delay: 300ms" />
+          <circle class="pv-fill pv-dot" cx="266" cy="296" r="4" style="animation-delay: 360ms" />
+          <circle class="pv-fill pv-dot" cx="292" cy="264" r="4" style="animation-delay: 420ms" />
+          <circle class="pv-fill pv-dot" cx="316" cy="252" r="4" style="animation-delay: 480ms" />
+          <circle class="pv-fill pv-dot" cx="342" cy="262" r="4" style="animation-delay: 540ms" />
+          <circle class="pv-fill pv-dot" cx="366" cy="230" r="4" style="animation-delay: 600ms" />
+          <circle class="pv-fill pv-dot" cx="392" cy="216" r="4" style="animation-delay: 660ms" />
+          <circle class="pv-fill pv-dot" cx="416" cy="226" r="4" style="animation-delay: 720ms" />
+          <circle class="pv-fill pv-dot" cx="442" cy="192" r="4" style="animation-delay: 780ms" />
+          <circle class="pv-fill pv-dot" cx="466" cy="176" r="4" style="animation-delay: 840ms" />
+          <circle class="pv-fill pv-dot" cx="490" cy="186" r="4" style="animation-delay: 900ms" />
+          <circle class="pv-fill pv-dot" cx="516" cy="152" r="4" style="animation-delay: 960ms" />
+          <circle class="pv-fill pv-dot" cx="542" cy="136" r="4" style="animation-delay: 1020ms" />
+        </g>
+
+        <!-- legend -->
+        <g class="pv-line" opacity="0.7">
+          <path d="M330 96h44" />
+          <circle class="pv-fill" cx="326" cy="96" r="4" />
+        </g>
+        <text class="pv-label" x="382" y="99">REGRESSÃO LINEAR</text>
+        <text class="pv-label" x="600" y="424" text-anchor="end">FIG. 05</text>
+      }
+    }
+  </svg>
+</div>

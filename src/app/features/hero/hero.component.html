@@ -1,0 +1,40 @@
+<section class="hero section section--dark" id="top">
+  <div class="hero__grid">
+    <div class="hero__content">
+      <p class="hero__kicker" reveal>{{ dict().hero.kicker }}</p>
+
+      <h1 class="hero__name" reveal [revealDelay]="90">
+        <span class="hero__line">{{ dict().hero.nameA }}</span>
+        <span class="hero__line hero__line--indent">{{ dict().hero.nameB }}</span>
+      </h1>
+
+      <p class="hero__role" reveal [revealDelay]="170">{{ dict().hero.role }}</p>
+
+      <p class="hero__statement" reveal [revealDelay]="240">{{ dict().hero.statement }}</p>
+
+      <div class="hero__actions" reveal [revealDelay]="320">
+        <a class="btn btn--accent" href="#work">
+          <span>{{ dict().hero.ctaWork }}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact">{{ dict().hero.ctaContact }}</a>
+      </div>
+
+      <p class="hero__meta" reveal [revealDelay]="400">{{ dict().hero.metaLine }}</p>
+    </div>
+
+    <div class="hero__figure" reveal [revealDelay]="200">
+      <app-hero-canvas />
+      <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
+      <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
+      <figcaption class="hero__figlabel">{{ dict().hero.figureLabel }}</figcaption>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#about">
+    <span class="hero__scroll-text">{{ dict().hero.scrollHint }}</span>
+    <span class="hero__scroll-line" aria-hidden="true"></span>
+  </a>
+</section>

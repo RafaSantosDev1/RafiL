@@ -1,0 +1,55 @@
+<section class="section section--dark" id="work">
+  <div class="section__inner">
+    <app-section-heading [index]="dict().work.index" [label]="dict().work.label" />
+
+    <div class="work__head">
+      <h2 class="work__heading" reveal>{{ dict().work.heading }}</h2>
+      <p class="work__intro" reveal [revealDelay]="80">{{ dict().work.intro }}</p>
+    </div>
+
+    <div class="work__list">
+      @for (project of projects; track project.id; let i = $index) {
+        <article
+          class="project"
+          [class.project--feature]="project.layout === 'feature-left' || project.layout === 'feature-right'"
+          [class.project--reverse]="project.layout === 'feature-right'"
+          [class.project--wide]="project.layout === 'wide'"
+          [class.project--card]="project.layout === 'card'"
+          [id]="'project-' + project.id"
+          reveal
+        >
+          <div class="project__visual">
+            <app-project-visual [visual]="project.visual" [alt]="content(project.id).name" />
+          </div>
+
+          <div class="project__body">
+            <header class="project__header">
+              <span class="project__index">{{ index(project.id) }}</span>
+              <span class="project__category">{{ content(project.id).category }}</span>
+            </header>
+
+            <h3 class="project__name">{{ content(project.id).name }}</h3>
+
+            <p class="project__description">{{ content(project.id).description }}</p>
+
+            <dl class="project__details">
+              <div class="project__detail">
+                <dt>{{ dict().work.contextLabel }}</dt>
+                <dd>{{ content(project.id).context }}</dd>
+              </div>
+              <div class="project__detail">
+                <dt>{{ dict().work.contributionLabel }}</dt>
+                <dd>{{ content(project.id).contribution }}</dd>
+              </div>
+            </dl>
+
+            <div class="project__tech">
+              <span class="project__techlabel">{{ dict().work.technologiesLabel }}</span>
+              <p class="project__techlist">{{ content(project.id).technologies.join(' · ') }}</p>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

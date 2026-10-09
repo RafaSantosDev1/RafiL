@@ -1,0 +1,43 @@
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.section--dark .section-heading {
+  border-color: var(--line-on-dark);
+}
+
+.section-heading__index {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.2rem;
+}
+
+.section-heading__label {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.section-heading__rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  margin-top: 0.6rem;
+}
+
+.section--dark .section-heading__rule {
+  background: var(--line-on-dark);
+}

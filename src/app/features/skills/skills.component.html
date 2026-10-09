@@ -1,0 +1,22 @@
+<section class="section section--light" id="skills">
+  <div class="section__inner">
+    <app-section-heading [index]="dict().skills.index" [label]="dict().skills.label" />
+
+    <div class="skills__head">
+      <h2 class="skills__heading" reveal>{{ dict().skills.heading }}</h2>
+      <p class="skills__intro" reveal [revealDelay]="80">{{ dict().skills.intro }}</p>
+    </div>
+
+    <div class="skills__groups">
+      @for (group of dict().skills.groups; track group.title; let i = $index) {
+        <div class="skill-group" [class.skill-group--primary]="i < 3" reveal [revealDelay]="i * 50">
+          <span class="skill-group__index">{{ '0' + (i + 1) }}</span>
+          <div class="skill-group__content">
+            <h3 class="skill-group__title">{{ group.title }}</h3>
+            <p class="skill-group__items">{{ group.items.join(' · ') }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

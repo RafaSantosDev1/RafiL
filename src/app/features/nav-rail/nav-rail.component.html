@@ -1,0 +1,25 @@
+<nav class="rail" aria-label="Navegação principal / Primary navigation">
+  <a class="rail__brand" href="#top" aria-label="Rafael Santos — início / home">
+    <span class="rail__monogram">RS</span>
+  </a>
+
+  <ul class="rail__links">
+    @for (link of links(); track link.id) {
+      <li>
+        <a
+          class="rail__link"
+          [class.is-active]="active() === link.id"
+          [href]="'#' + link.id"
+          [attr.aria-current]="active() === link.id ? 'true' : null"
+        >
+          <span class="rail__num">{{ link.index }}</span>
+          <span class="rail__label">{{ link.label }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+
+  <div class="rail__foot">
+    <app-language-toggle />
+  </div>
+</nav>

@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+main {
+  margin-left: var(--rail-width);
+}
+
+main section {
+  scroll-margin-top: var(--topbar-height);
+}
+
+@media (max-width: 1023px) {
+  main {
+    margin-left: 0;
+    padding-top: var(--topbar-height);
+  }
+}
